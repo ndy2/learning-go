@@ -1,6 +1,6 @@
 # 러닝 Go
 
-<img src="https://image.yes24.com/goods/107680603/XL" width="200">
+![images/learning_go.png](images/learning_go.png)
 
 1. Go 개발 환경 설정
 2. [기본 데이터 타입과 선언](chapter02/README.md)
