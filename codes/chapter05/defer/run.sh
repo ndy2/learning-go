@@ -1,0 +1,1 @@
+go run simple_cat.go README.md
