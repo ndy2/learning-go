@@ -12,28 +12,26 @@
         <meta name="author" content="ndy">
       
       
-        <link rel="canonical" href="https://ndy2.github.io/learning-go/chapter05/5.2/">
+        <link rel="canonical" href="https://ndy2.github.io/learning-go/chapter07/section2/7.2.7/">
       
       
-        <link rel="prev" href="../5.1/">
+        <link rel="prev" href="../7.2.1/">
       
       
-        <link rel="next" href="../5.3/">
       
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
     
     
       
-        <title>5.2 함수는 값이다 - Study Learning Go</title>
+        <title>7.2.7 열거형을 위한 iota - Study Learning Go</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +66,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#521" class="md-skip">
+        <a href="#iota" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +101,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Study Learning Go" class="md-header__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
+    <a href="../../.." title="Study Learning Go" class="md-header__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -123,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5.2 함수는 값이다
+              7.2.7 열거형을 위한 iota
             
           </span>
         </div>
@@ -236,7 +234,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Study Learning Go" class="md-nav__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
+    <a href="../../.." title="Study Learning Go" class="md-nav__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -266,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -314,7 +312,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter02/" class="md-nav__link ">
+            <a href="../../../chapter02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -347,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter02/2.1/" class="md-nav__link">
+      <a href="../../../chapter02/2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter02/2.2/" class="md-nav__link">
+      <a href="../../../chapter02/2.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter02/2.3/" class="md-nav__link">
+      <a href="../../../chapter02/2.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter02/2.6/" class="md-nav__link">
+      <a href="../../../chapter02/2.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter02/NOTE/" class="md-nav__link">
+      <a href="../../../chapter02/NOTE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +483,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter03/" class="md-nav__link ">
+            <a href="../../../chapter03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -518,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter03/3.2/" class="md-nav__link">
+      <a href="../../../chapter03/3.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter03/3.3/" class="md-nav__link">
+      <a href="../../../chapter03/3.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter03/3.4/" class="md-nav__link">
+      <a href="../../../chapter03/3.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter03/NOTE/" class="md-nav__link">
+      <a href="../../../chapter03/NOTE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +633,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter04/" class="md-nav__link ">
+            <a href="../../../chapter04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -668,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter04/4.1/" class="md-nav__link">
+      <a href="../../../chapter04/4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter04/4.2/" class="md-nav__link">
+      <a href="../../../chapter04/4.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter04/4.3/" class="md-nav__link">
+      <a href="../../../chapter04/4.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter04/4.4/" class="md-nav__link">
+      <a href="../../../chapter04/4.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,8 +754,6 @@
       
   
   
-    
-  
   
   
     
@@ -780,16 +776,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../chapter05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -806,7 +802,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             5장 함수
@@ -822,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.1/" class="md-nav__link">
+      <a href="../../../chapter05/5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,28 +836,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    5.2 함수는 값이다
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../chapter05/5.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,42 +848,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#521" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2.1 함수 타입 선언
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#522" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2.2 익명 함수
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -918,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.3/" class="md-nav__link">
+      <a href="../../../chapter05/5.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.4/" class="md-nav__link">
+      <a href="../../../chapter05/5.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.5/" class="md-nav__link">
+      <a href="../../../chapter05/5.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +956,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter06/" class="md-nav__link ">
+            <a href="../../../chapter06/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1047,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter06/6.1/" class="md-nav__link">
+      <a href="../../../chapter06/6.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1068,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter06/6.2/" class="md-nav__link">
+      <a href="../../../chapter06/6.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1089,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter06/6.4/" class="md-nav__link">
+      <a href="../../../chapter06/6.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter06/6.7/" class="md-nav__link">
+      <a href="../../../chapter06/6.7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1135,6 +1077,8 @@
       
   
   
+    
+  
   
   
     
@@ -1163,16 +1107,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter07/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1189,7 +1133,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             7장 타입, 메서드, 인터페이스
@@ -1205,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/7.1/" class="md-nav__link">
+      <a href="../../7.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1226,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/7.3/" class="md-nav__link">
+      <a href="../../7.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1247,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/7.5/" class="md-nav__link">
+      <a href="../../7.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1268,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/7.6/" class="md-nav__link">
+      <a href="../../7.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1289,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/7.7/" class="md-nav__link">
+      <a href="../../7.7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1310,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/7.8/" class="md-nav__link">
+      <a href="../../7.8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1331,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/interface/" class="md-nav__link">
+      <a href="../../interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,6 +1293,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1365,16 +1311,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter07/section2/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1391,7 +1337,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_9">
             <span class="md-nav__icon md-icon"></span>
             7.2 메서드
@@ -1407,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter07/section2/7.2.1/" class="md-nav__link">
+      <a href="../7.2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,10 +1371,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../chapter07/section2/7.2.7/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    7.2.7 열거형을 위한 iota
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1437,6 +1401,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iota" class="md-nav__link">
+    <span class="md-ellipsis">
+      iota 의 기본적 사용
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iota_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      iota 를 특정한 패턴을 가진 상수에 사용하기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iota-vs-java-enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      iota vs java enum
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1482,18 +1491,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#521" class="md-nav__link">
+  <a href="#iota" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2.1 함수 타입 선언
+      iota 의 기본적 사용
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#522" class="md-nav__link">
+  <a href="#iota_1" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2.2 익명 함수
+      iota 를 특정한 패턴을 가진 상수에 사용하기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iota-vs-java-enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      iota vs java enum
     </span>
   </a>
   
@@ -1518,119 +1536,51 @@
     
       
     
-    <a href="https://github.com/ndy2/learning-go/tree/main/docs/chapter05/5.2.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/ndy2/learning-go/tree/main/docs/chapter07/section2/7.2.7.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>5.2 함수는 값이다</h1>
+  <h1>7.2.7 열거형을 위한 iota</h1>
 
-<ul>
-<li><strong>함수는 값이다.</strong></li>
-<li>함수의 타입은 키워드 func 와 파라미터 타입 및 반환 값으로 구성된다.</li>
-<li>이런 조합을 함수 시그니처라 부른다. (함수명 포함)</li>
-</ul>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">함수명</span><span class="p">(</span><span class="nx">매개변수명</span><span class="w"> </span><span class="nx">타입</span><span class="p">,</span><span class="w"> </span><span class="nx">매개변수명</span><span class="w"> </span><span class="nx">타입</span><span class="p">,</span><span class="w"> </span><span class="o">...</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">반환값타입</span><span class="p">,</span><span class="w"> </span><span class="nx">반환값타입</span><span class="p">,</span><span class="w"> </span><span class="o">...</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// 함수 내용</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+<p>Go 는 열거형 타입을 가지고 있지 않다.</p>
+<h4 id="iota">iota 의 기본적 사용<a class="headerlink" href="#iota" title="Permanent link">&para;</a></h4>
+<p><strong>Go에서 iota는 상수 선언에서 열거형 값을 자동으로 생성하기 위해 사용되는 특별한 식별자입니다.</strong></p>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">MailCategory</span><span class="w"> </span><span class="kt">int</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">UncaughtException</span><span class="w"> </span><span class="nx">MailCategory</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">iota</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">Personal</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nx">Spam</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nx">Social</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nx">Advertisement</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>위 코드에서 <code>MailCategory</code>는 <code>int</code> 타입이다. <code>iota</code>는 상수를 선언할 때 사용되는 특별한 식별자이다. 
+<code>iota</code>는 상수 블록에서 사용되며, 상수 블록의 첫 번째 상수는 0이고, 그 다음 상수는 1, 2, 3, ... 순으로 증가한다.</p>
+<p><code>iota</code>는 상수 블록에서만 사용할 수 있으며, 상수 블록이 끝나면 <code>iota</code>는 초기화된다.</p>
+<h4 id="iota_1">iota 를 특정한 패턴을 가진 상수에 사용하기<a class="headerlink" href="#iota_1" title="Permanent link">&para;</a></h4>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nx">_</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="kc">iota</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">KB</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kc">iota</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1024</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nx">MB</span><span class="w">                    </span><span class="c1">// 1048576</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nx">GB</span><span class="w">                    </span><span class="c1">// 1073741824</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kd">const</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nx">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">iota</span><span class="w"> </span><span class="c1">// 0</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nx">_</span><span class="w">        </span><span class="c1">// 1 (건너뜀)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nx">C</span><span class="w">        </span><span class="c1">// 2</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">)</span>
 </span></code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">함수 시그니쳐</p>
-<ul>
-<li>함수명 + 파라미터 조합 + 반환 타입</li>
-<li>파라미터와 반환 목록의 이름은 함수 시그니처에 포함되지 않음</li>
-<li>vararg 는 slice 로 취급</li>
-</ul>
+<p class="admonition-title">iota 의 0 값은 사용하지 않을 때는 <code>_</code> 로 표시한다.</p>
 </div>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">func</span><span class="w"> </span><span class="nx">sub</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">mul</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">func</span><span class="w"> </span><span class="nx">div</span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kd">var</span><span class="w"> </span><span class="nx">opMap</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">func</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="p">{</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="s">&quot;+&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">add</span><span class="p">,</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="s">&quot;-&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">sub</span><span class="p">,</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="s">&quot;*&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">mul</span><span class="p">,</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="s">&quot;/&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">div</span><span class="p">,</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
-</span></code></pre></div>
-<p><code>func(int, int) int</code> 를 마치 타입 처럼 (실제로 그냥 타입이다) 활용할 수 있다.</p>
-<h3 id="521">5.2.1 함수 타입 선언<a class="headerlink" href="#521" title="Permanent link">&para;</a></h3>
-<p>struct 와 마찬가지로 <code>type</code> 을 통해 함수 타입을 정의 할 수 있다.</p>
-<ul>
-<li>Kotlin 이나 Scala 의 <strong>타입 별칭(type alias)</strong>와 유사한 개념</li>
-<li>func type 이 아니라도 사용 가능</li>
-</ul>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">binaryOperation</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">opMap</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">binaryOperation</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="c1">// ...</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
-</span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Go 의 type 키워드 vs Kotlin/Scala 의 type alias</p>
-<p>Go 에서 type 키워드 타입을 새로 정의하는 것이지만, 실제로는 해당 타입과 동일하게 동작합니다. 
-다만 새로운 타입을 사용하면 메서드를 추가할 수 있는 고유 타입으로 취급됩니다. 
-반면 Kotlin 과 Scala 의 typealias 는 완전히 동일한 타입에 대한 다른 이름을 제공하는 단순한 별칭입니다.</p>
-</div>
-<h3 id="522">5.2.2 익명 함수<a class="headerlink" href="#522" title="Permanent link">&para;</a></h3>
-<p>a. 변수에 할당</p>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="c1">// 익명 함수를 변수에 할당</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nx">add</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="c1">// 익명 함수 호출</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w">  </span><span class="c1">// Output: 8</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>b. 즉시 실행</p>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="c1">// 즉시 실행되는 익명 함수</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">}(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="c1">// 함수 호출과 동시에 인자를 전달</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="c1">// Output: 10</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>c. 다른 함수의 인자로 전달하기</p>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">// 두 개의 정수를 받아서 연산하는 함수</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">operate</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">op</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">op</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="c1">// 익명 함수를 인자로 전달</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">operate</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="c1">// 곱셈 연산</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="p">})</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="c1">// Output: 6</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="p">}</span>
-</span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">선언된 익명 함수를 변수에 할당 없이 사용하는 유용한 두 가지 상황</p>
-<ol>
-<li>defer 문</li>
-<li>고루틴</li>
-</ol>
-</div>
+<h3 id="iota-vs-java-enum">iota vs java enum<a class="headerlink" href="#iota-vs-java-enum" title="Permanent link">&para;</a></h3>
+<p>iota 의 상수 값은 java 의 enum 처럼 각각의 필드를 가질 수 없다.
+타입에 대한 메서드를 추가하고 map/ slice 를 통해 이를 흉내 낼 수 있다.</p>
 
 
 
@@ -1653,7 +1603,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2024</span>
   </span>
 
     
@@ -1663,7 +1613,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2024</span>
   </span>
 
     
@@ -1692,7 +1642,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../5.1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5.1 함수 선언과 호출">
+          <a href="../7.2.1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7.2.1 포인터 리시버와 값 리시버">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1702,27 +1652,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                5.1 함수 선언과 호출
+                7.2.1 포인터 리시버와 값 리시버
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../5.3/" class="md-footer__link md-footer__link--next" aria-label="Next: 5.3 클로저">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                5.3 클로저
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -1749,10 +1683,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.view", "navigation.footer", "navigation.indexes", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.footer", "navigation.indexes", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
