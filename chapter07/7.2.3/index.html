@@ -12,11 +12,13 @@
         <meta name="author" content="ndy">
       
       
-        <link rel="canonical" href="https://ndy2.github.io/learning-go/chapter07/7.2/">
+        <link rel="canonical" href="https://ndy2.github.io/learning-go/chapter07/7.2.3/">
       
       
-        <link rel="prev" href="../7.2.3/">
+        <link rel="prev" href="../7.2.1/">
       
+      
+        <link rel="next" href="../7.2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +26,7 @@
     
     
       
-        <title>7.2 메서드 - Study Learning Go</title>
+        <title>7.2.3 - Study Learning Go</title>
       
     
     
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7.2 메서드
+              7.2.3
             
           </span>
         </div>
@@ -1175,27 +1177,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../7.2.3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    7.2.3
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1210,12 +1191,33 @@
         
   
   <span class="md-ellipsis">
-    7.2 메서드
+    7.2.3
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7.2 메서드
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1263,41 +1265,16 @@
     
       
     
-    <a href="https://github.com/ndy2/learning-go/tree/main/docs/chapter07/7.2.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/ndy2/learning-go/tree/main/docs/chapter07/7.2.3.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>7.2 메서드</h1>
+  <h1>7.2.3</h1>
 
-<p>대부분의 최신 언어와 마찬가지로, Go 는 사용자 정의 타입에 대한 메서드를 지원합니다. 메서드는 특정 타입에 속하는 함수입니다.</p>
-<p>타입을 위한 메서드는 패키지 블록 레벨에서 정의된다.</p>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">Name</span><span class="w"> </span><span class="kt">string</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">Age</span><span class="w">  </span><span class="kt">int</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="nx">Person</span><span class="p">)</span><span class="w"> </span><span class="nx">SayHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Hello, my name is %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">Name</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>메서드 선언은 함수 선언과 비슷한데 추가적으로 리시버<sup>Receiver</sup>를 가집니다. 
-리시버는 메서드가 호출되는 대상을 나타냅니다. 위의 예제에서 <code>Person</code> 타입의 <code>SayHello</code> 메서드는 <code>Person</code> 타입의 인스턴스에 대해 호출됩니다.</p>
-<p>관례적으로 리시버 변수의 이름은 첫 글자를 따서 짓는다.
-다른 언어 (예: Java)에서는 <code>this</code> 또는 <code>self</code>와 같은 키워드를 사용하지만 Go 에서는 사용하지 않습니다.</p>
-<p>함수와 같이, 메서드 이름은 오버로딩 될 수 없습니다.</p>
-<p>메서드는 연관된 타입과 동일한 패키지에 정의되어야 합니다.</p>
-<ol>
-<li>포인터 리시버와 값 리시버</li>
-<li>nil 인스턴스를 위한 메서드 작성</li>
-<li>메서드도 함수이다</li>
-<li>함수와 메서드 비교</li>
-<li>타입 선언은 상속되지 않는다</li>
-<li>타입은 실행가능한 문서이다</li>
-<li>열거형을 위한 iota</li>
-</ol>
+
 
 
 
@@ -1330,7 +1307,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2024</span>
   </span>
 
     
@@ -1359,7 +1336,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../7.2.3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7.2.3">
+          <a href="../7.2.1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7.2.1 포인터 리시버와 값 리시버">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1369,11 +1346,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                7.2.3
+                7.2.1 포인터 리시버와 값 리시버
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../7.2/" class="md-footer__link md-footer__link--next" aria-label="Next: 7.2 메서드">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                7.2 메서드
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
