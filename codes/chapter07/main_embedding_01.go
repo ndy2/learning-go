@@ -31,4 +31,10 @@ func main() {
 
 	fmt.Println(m.Description())      // John (100)
 	fmt.Println(m.FindNewEmployees()) // [{Alice 200} {Bob 201}]
+
+	fmt.Println(m.Employee.Id) // 100
+	fmt.Println(m.Id)          // 100
+
+	var employee Employee = m.Employee
+	fmt.Println(employee)
 }
