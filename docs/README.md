@@ -8,3 +8,5 @@
 4. [블록, 섀도, 제어 구조](chapter04/README.md)
 5. [함수](chapter05/README.md)
 6. [포인터](chapter06/README.md)
+7. [타입, 메서드, 인터페이스](chapter07/README.md)
+8. [오류](chapter08/README.md)
