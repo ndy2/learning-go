@@ -1,14 +1,22 @@
----
-title: 8.7 defer 로 오류 래핑
-aliases:
-  - Wrapping Errors with defer
----
+package main
 
-Go 에서는 `defer` 문을 사용하여 함수가 종료되기 직전에 실행되는 코드를 작성할 수 있습니다.
+import "fmt"
 
-`defer` 문은 함수가 종료되기 직전에 실행되는 코드를 작성할 수 있습니다. 이를 이용하면 함수가 종료되기 직전에 오류를 래핑하는 코드를 작성할 수 있습니다.
+func doThing1(val1 int) (int, error) {
+	// do some things
+	return 0, nil
+}
 
-```go
+func doThing2(val2 string) (string, error) {
+	// do some things
+	return "", nil
+}
+
+func doThing3(val3 int, val4 string) (string, error) {
+	// do some things
+	return "", nil
+}
+
 func DoSomeThings1(val1 int, val2 string) (_ string, err error) {
 	defer func() {
 		if err != nil {
@@ -28,11 +36,7 @@ func DoSomeThings1(val1 int, val2 string) (_ string, err error) {
 	}
 	return doThing3(val3, val4)
 }
-```
 
-without `defer`:
-
-```go
 func DoSomeThings2(val1 int, val2 string) (string, error) {
 	val3, err := doThing1(val1)
 	if err != nil {
@@ -51,4 +55,7 @@ func DoSomeThings2(val1 int, val2 string) (string, error) {
 
 	return result, nil
 }
-```
+
+func main() {
+
+}
