@@ -26,7 +26,7 @@
     
     
       
-        <title>9.3 - Study Learning Go</title>
+        <title>9.3 패키지 빌드 - Study Learning Go</title>
       
     
     
@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#931-import-and-export" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9.3
+              9.3 패키지 빌드
             
           </span>
         </div>
@@ -1733,7 +1738,7 @@
         
   
   <span class="md-ellipsis">
-    9.1
+    9.1 저장소, 모듈 그리고 패키지
   </span>
   
 
@@ -1754,7 +1759,7 @@
         
   
   <span class="md-ellipsis">
-    9.2
+    9.2 go.mod
   </span>
   
 
@@ -1778,15 +1783,133 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    9.3 패키지 빌드
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    9.3
+    9.3 패키지 빌드
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#931-import-and-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.1 import and export
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#932" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.2 패키지 생성과 접근
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#933" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.3 패키지 이름 짓기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#934" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.4 모듈을 구성하는 방법
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#935" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.5 패키지 이름 재정의
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#936-godoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.6 패키지 주석과 godoc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#937" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.7 내부 패키지
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#938-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.8 init 함수: 가능하면 피하자
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#939" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.9 순환 의존성
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9310-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.10 API 의 이름을 우아하게 바꾸고 재구성하기
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1839,6 +1962,104 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#931-import-and-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.1 import and export
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#932" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.2 패키지 생성과 접근
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#933" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.3 패키지 이름 짓기
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#934" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.4 모듈을 구성하는 방법
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#935" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.5 패키지 이름 재정의
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#936-godoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.6 패키지 주석과 godoc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#937" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.7 내부 패키지
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#938-init" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.8 init 함수: 가능하면 피하자
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#939" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.9 순환 의존성
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9310-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.10 API 의 이름을 우아하게 바꾸고 재구성하기
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1863,13 +2084,76 @@
   
 
 
-  <h1>9.3</h1>
+  <h1>9.3 패키지 빌드</h1>
 
-<hr />
-<p>title: 9.3 패키지 빌드
-aliases:
-  - Building Packages</p>
-<hr />
+<h3 id="931-import-and-export">9.3.1 import and export<a class="headerlink" href="#931-import-and-export" title="Permanent link">&para;</a></h3>
+<p><code>import</code> 문은 <strong>다른 패키지</strong>에서 노출된 <sup>exported</sup> 상수, 변수, 함수, 타입을 접근할 수 있도록 한다.</p>
+<p>Go 에서는 <strong>특별한 키워드 없이</strong> 패키지 레벨 식별자를 <strong>대문자로 시작</strong>하는 것으로 노출할 수 있다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>노출된 모든 것은 패키지 API 의 일부이다.
+식별자를 노출시키기 전, 의도한 것인지 확인해야 한다.
+의도적으로 주요 버전을 변경하지 않는 한 이전 버전과 호환은 유지해야 한다.</p>
+</div>
+<h3 id="932">9.3.2 패키지 생성과 접근<a class="headerlink" href="#932" title="Permanent link">&para;</a></h3>
+<p>see</p>
+<ul>
+<li>https://github.com/learning-go-book/package_example or</li>
+<li>https://github.com/ndy2/learning-go/tree/main/codes/chapter09/</li>
+</ul>
+<h3 id="933">9.3.3 패키지 이름 짓기<a class="headerlink" href="#933" title="Permanent link">&para;</a></h3>
+<p><strong>1. 패키지 이름은 설명적이어야 한다.</strong></p>
+<p><code>util.ExtractName</code>/<code>util.FormatName</code> 보다 <code>extract.Names</code>/ <code>format.Names</code> 이 더 좋다.
+패키지 이름으로 명확히 구분이 되기 때문에 두 함수의 이름이 같더라도 문제가 없다.</p>
+<p><strong>2. 패키지 내의 함수 및 타입의 이름에서 패키지 이름을 반복하지 말자</strong></p>
+<p><code>page.PageInfo</code>/ <code>page.PageHandler</code> 보다 <code>page.Info</code>/ <code>page.Handler</code> 가 더 좋다.</p>
+<ul>
+<li>식별자의 이름이 패키지의 이름과 완전히 같은 경우는 예외<ul>
+<li>e.g.) sort.Sort/ context.Context</li>
+</ul>
+</li>
+</ul>
+<h3 id="934">9.3.4 모듈을 구성하는 방법<a class="headerlink" href="#934" title="Permanent link">&para;</a></h3>
+<p>모듈에서 Go 패키지를 구성하는 공식적인 방법은 없지만, 몇 년에 걸쳐 몇 가지 패턴들이 나타 났다.</p>
+<p><strong>1. 모듈이 작다면, 모든 코드를 단일 패키지로 구성</strong></p>
+<p><strong>2. 모듈이 하나 이상의 응용 프로그램으로 구성되었다면, 모듈의 루트 디렉토리에 cmd 디렉토리를 만들자.</strong></p>
+<ul>
+<li>cmd 내에는 모듈에서 생성하는 각 바이너리에 대해 하나의 디렉터리를 만든다.</li>
+</ul>
+<p><strong>3. 모듈이 루트 디렉토리에 테스팅 관리 및 프로젝트 배포를 위한 많은 파일을 포함한다면, 모듈의 루트 디렉토리에 pkg 디렉토리를 만들자.</strong></p>
+<ul>
+<li>모든 Go 코드 를 pkg 디렉터리 하위 패키지로 이동한다.</li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">참고 자료</p>
+<ul>
+<li>GopherCon 2018 - Kat Zien - How Do You Structure Your Go Apps <a href="https://youtu.be/oL6JBUk6tj0">@Youtube</a></li>
+</ul>
+</div>
+<h3 id="935">9.3.5 패키지 이름 재정의<a class="headerlink" href="#935" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SKIP</li>
+</ul>
+<h3 id="936-godoc">9.3.6 패키지 주석과 godoc<a class="headerlink" href="#936-godoc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>TODO</li>
+</ul>
+<h3 id="937">9.3.7 내부 패키지<a class="headerlink" href="#937" title="Permanent link">&para;</a></h3>
+<ul>
+<li>TODO</li>
+</ul>
+<h3 id="938-init">9.3.8 init 함수: 가능하면 피하자<a class="headerlink" href="#938-init" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SKIP/TODO</li>
+</ul>
+<h3 id="939">9.3.9 순환 의존성<a class="headerlink" href="#939" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SKIP/TODO</li>
+</ul>
+<h3 id="9310-api">9.3.10 API 의 이름을 우아하게 바꾸고 재구성하기<a class="headerlink" href="#9310-api" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SKIP</li>
+</ul>
 
 
 
@@ -1931,7 +2215,7 @@ aliases:
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../9.2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9.2">
+          <a href="../9.2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9.2 go.mod">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1941,7 +2225,7 @@ aliases:
                 Previous
               </span>
               <div class="md-ellipsis">
-                9.2
+                9.2 go.mod
               </div>
             </div>
           </a>
