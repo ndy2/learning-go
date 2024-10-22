@@ -30,37 +30,48 @@ go get github.com/learning-go-book/simpletax@v1.0.0
 
 ### 9.4.3 최소 버전 선택
 
-- TODO
+> [!QUOTE] 참고 자료
+>
+> - [go.dev > ref > Modules#minimal-version-selection](https://go.dev/ref/mod#minimal-version-selection)
+
+모듈 시스템은 최소 버전 선택<sup>MVS, Minimal Version Selection</sup>의 원칙을 따른다.
+
+- go.mod 파일에서 기록되어 가져오게 될 선언된 **의존성들을 만족할 수 있는 가장 낮은 버전**을 가져오도록 한다는 의미이다.
+- 예를 들어, 모듈 A가 B 버전 1.2를 의존하고, 모듈 C가 B 버전 1.3을 의존하면, Go는 B의 최소 버전인 1.2를 선택합니다.
 
 ---
 
 ### 9.4.4 호환되는 버전으로 업데이트
 
-- TODO
+- SKIP
 
 ---
 
 ### 9.4.5 호환되지 않는 버전으로 업데이트
 
-- TODO
+- SKIP
 
 ---
 
 ### 9.4.6 벤더링
 
-- TODO
+> [!QUOTE] 참고 자료
+>
+> - [go.dev > ref > Modules#vendoring](https://go.dev/ref/mod#vendoring)
 
 ---
 
 ### 9.4.7 pkg.go.dev
 
-- TODO
+> [!QUOTE] 참고 자료
+>
+> - [pkg.go.dev](https://pkg.go.dev/)
 
 ---
 
 ### 9.4.8 추가 정보
 
-- TODO
+- DUP
 
 ---
 
