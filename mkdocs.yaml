@@ -10,6 +10,8 @@ site_description: >-
 repo_name: ndy2/learning-go
 repo_url: https://github.com/ndy2/learning-go
 
+extra_css:
+  - stylesheets/extra.css
 
 theme:
   name: 'material'
@@ -37,14 +39,17 @@ theme:
     quote: octicons/quote-16
   palette:
     - scheme: default
+      primary: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
+      primary: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   favicon: images/favicon.svg
+  logo: images/favicon.svg
 
 # Extensions
 markdown_extensions:
