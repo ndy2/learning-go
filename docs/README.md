@@ -1,3 +1,9 @@
+---
+title: 러닝 Go
+aliases:
+  - Learning Go
+---
+
 # 러닝 Go
 
 ![images/learning_go.png](images/learning_go.jpg)
@@ -11,3 +17,4 @@
 7. [타입, 메서드, 인터페이스](chapter07/README.md)
 8. [오류](chapter08/README.md)
 9. [모듈, 패키지 그리고 임포트](chapter09/README.md)
+10. [Go 의 동시성](chapter10/README.md)
