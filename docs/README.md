@@ -18,6 +18,11 @@ aliases:
 8. [오류](chapter08/README.md)
 9. [모듈, 패키지 그리고 임포트](chapter09/README.md)
 10. [Go 의 동시성](chapter10/README.md)
+11. 표준 라이브러리
+12. 컨텍스트
+13. 테스트 작성
+14. Reflect, Unsafe, Cgo
+15. Go 의 제네릭
 
 ---
 
