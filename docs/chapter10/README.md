@@ -3,6 +3,10 @@
 > [!QUOTE] 참고 자료
 >
 > - [go.dev > tour > Concurrency](https://go.dev/tour/concurrency)
+> - To further explore Go's concurrency model, watch
+>    - [Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs) and 
+>    - [Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw) and 
+>    - read the [Share Memory by Communicating](https://go.dev/doc/codewalk/sharemem/) codewalk.
 
 1. [동시성 사용 시점](10.1.md)
 2. [고루틴](10.2.md)
