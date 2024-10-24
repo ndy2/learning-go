@@ -1,7 +1,7 @@
 ---
 title: 10.5 동시성 사례와 패턴
 aliases:
-  - 
+  - Concurrency Practices and Patterns
 ---
 
 몇 가지 동시성 모범 사례와 패턴을 알아보자.

@@ -1,3 +1,9 @@
+---
+title: 10장 Go 의 동시성
+aliases:
+  - Concurrency in Go
+---
+
 # Go 의 동시성
 
 > [!QUOTE] 참고 자료
