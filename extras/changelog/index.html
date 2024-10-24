@@ -12,13 +12,13 @@
         <meta name="author" content="ndy">
       
       
-        <link rel="canonical" href="https://ndy2.github.io/learning-go/chapter08/8.5/">
+        <link rel="canonical" href="https://ndy2.github.io/learning-go/extras/changelog/">
       
       
-        <link rel="prev" href="../8.4/">
+        <link rel="prev" href="../../chapter11/11.4/">
       
       
-        <link rel="next" href="../8.6/">
+        <link rel="next" href="../commands/">
       
       
       <link rel="icon" href="../../images/favicon.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>8.5 오류 래핑 - Study Learning Go</title>
+        <title>Go 버전별 주요 변경 사항 - Study Learning Go</title>
       
     
     
@@ -88,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-go-10-2012" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -119,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8.5 오류 래핑
+              Go 버전별 주요 변경 사항
             
           </span>
         </div>
@@ -1400,8 +1405,6 @@
       
   
   
-    
-  
   
   
     
@@ -1432,16 +1435,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../chapter08/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1458,7 +1461,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             8장 오류
@@ -1474,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.1/" class="md-nav__link">
+      <a href="../../chapter08/8.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1495,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.2/" class="md-nav__link">
+      <a href="../../chapter08/8.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1516,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.3/" class="md-nav__link">
+      <a href="../../chapter08/8.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.4/" class="md-nav__link">
+      <a href="../../chapter08/8.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1555,17 +1558,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../chapter08/8.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1574,7 +1570,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1587,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.6/" class="md-nav__link">
+      <a href="../../chapter08/8.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1608,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.7/" class="md-nav__link">
+      <a href="../../chapter08/8.7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1629,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.8/" class="md-nav__link">
+      <a href="../../chapter08/8.8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.9/" class="md-nav__link">
+      <a href="../../chapter08/8.9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2288,8 +2283,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -2302,11 +2299,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -2320,7 +2317,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             그 외
@@ -2331,10 +2328,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../extras/changelog/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Go 버전별 주요 변경 사항
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2343,6 +2358,132 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-go-10-2012" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Go 1.0 (2012년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-go-15-2015" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Go 1.5 (2015년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-go-16-2016" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Go 1.6 (2016년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-go-17-2016" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Go 1.7 (2016년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-go-19-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Go 1.9 (2017년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-go-111-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Go 1.11 (2018년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-go-113-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Go 1.13 (2019년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-go-114-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Go 1.14 (2020년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-go-116-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Go 1.16 (2021년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-go-118-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Go 1.18 (2022년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-go-119-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Go 1.19 (2022년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-go-120-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Go 1.20 (2023년)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2355,7 +2496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../extras/commands/" class="md-nav__link">
+      <a href="../commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2376,7 +2517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../extras/semver/" class="md-nav__link">
+      <a href="../semver/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2415,6 +2556,122 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-go-10-2012" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Go 1.0 (2012년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-go-15-2015" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Go 1.5 (2015년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-go-16-2016" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Go 1.6 (2016년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-go-17-2016" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Go 1.7 (2016년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-go-19-2017" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Go 1.9 (2017년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-go-111-2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Go 1.11 (2018년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-go-113-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Go 1.13 (2019년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-go-114-2020" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Go 1.14 (2020년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-go-116-2021" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Go 1.16 (2021년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-go-118-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Go 1.18 (2022년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-go-119-2022" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Go 1.19 (2022년)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-go-120-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Go 1.20 (2023년)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2432,57 +2689,89 @@
     
       
     
-    <a href="https://github.com/ndy2/learning-go/tree/main/docs/chapter08/8.5.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/ndy2/learning-go/tree/main/docs/extras/changelog.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>8.5 오류 래핑</h1>
+  <h1>Go 버전별 주요 변경 사항</h1>
 
-<p>Go의 오류 래핑</p>
-<p>Go에서 오류 래핑은 주로 fmt.Errorf나 errors.Wrap(외부 패키지인 pkg/errors에서 제공) 등을 사용해 구현됩니다. 
-오류 래핑은 기존 오류에 추가적인 정보를 덧붙여 더 풍부한 오류 메시지를 만들 수 있도록 해줍니다. 오류를 래핑한 후에도, 래핑된 오류의 원래 오류를 추적할 수 있습니다.</p>
-<p>Go의 오류 래핑 예시:</p>
-<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="s">&quot;errors&quot;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">doSomething</span><span class="p">()</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;original error&quot;</span><span class="p">)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">doSomething</span><span class="p">()</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nx">wrappedErr</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;failed to do something: %w&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="c1">// %w로 원래 오류를 래핑</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">wrappedErr</span><span class="p">)</span><span class="w">                                     </span><span class="c1">// 새로운 메시지와 원래 오류 출력</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">orgErr</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">Unwrap</span><span class="p">(</span><span class="nx">wrappedErr</span><span class="p">);</span><span class="w"> </span><span class="nx">orgErr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Unwrap 으로 원래 오류를 가져옴</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">orgErr</span><span class="p">)</span><span class="w"> </span><span class="c1">// </span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>실행 결과: 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>failed to do something: original error
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>original error
-</span></code></pre></div></p>
-<div class="admonition note">
-<p>대부분 errors.Unwrap 을 직접 호출 하지 않고, 대신 errors.Is 또는 errors.As 를 사용하여 특정 래핑된 오류를 찾는다.</p>
-</div>
-<div class="admonition question">
-<p class="admonition-title">하나의 오류가 두개 이상의 오류를 wrapping 할 수 있니? </p>
-<p>방법 1: 사용자 정의 구조체 만들기</p>
-<p>Go 에서 하나의 오류가 두 개 이상의 오류를 래핑하는 것은 <strong>가능</strong>합니다. 
-<strong>다만</strong>, Go의 기본 오류 인터페이스는 단일 오류만을 래핑하도록 설계되어 있습니다. 
-하지만, 여러 오류를 함께 처리하고 싶다면 <strong>사용자 정의 구조체</strong>를 만들어 여러 오류를 포함하는 오류를 구현할 수 있습니다.</p>
-<p>방법 2: errors.Join 사용 (Go 1.20 이상)</p>
-</div>
+<dl>
+<dt><strong>Q</strong></dt>
+<dd>go 의 버전이 오름에 따라 큰 변화들을 나열해줘</dd>
+<dt><strong>A</strong></dt>
+<dd>Go 언어는 버전이 오름에 따라 많은 중요한 변화와 기능이 추가되었음. 특히 Go 1.x 시리즈는 점진적인 개선을 통해 성능 향상, 새로운 기능 추가, 개발자 편의성 증대 등을 추구해 왔음. 주요 버전에서 있었던 큰 변화를 아래에 나열해 봄:</dd>
+</dl>
+<h3 id="1-go-10-2012">1. <strong>Go 1.0 (2012년)</strong><a class="headerlink" href="#1-go-10-2012" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>초기 릴리즈</strong>: Go 언어의 첫 번째 안정화 버전으로, 이후 하위 호환성을 유지하는 것을 목표로 개발이 진행됨.</li>
+<li><strong>주요 특징</strong>: 간결한 문법, 빠른 컴파일, 내장된 동시성 지원 (고루틴, 채널), 강력한 표준 라이브러리.</li>
+</ul>
+<h3 id="2-go-15-2015">2. <strong>Go 1.5 (2015년)</strong><a class="headerlink" href="#2-go-15-2015" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>컴파일러 자체 호스팅</strong>: 기존 C로 작성된 Go 컴파일러가 Go로 재작성되었음. 이제 Go 컴파일러 자체가 Go로 작성되어, Go 생태계의 독립성과 일관성을 높임.</li>
+<li><strong>Garbage Collector 개선</strong>: 더 짧은 지연 시간(low-latency)을 가지는 가비지 컬렉터로 개선되어, 고성능 어플리케이션에서의 효율성이 크게 향상됨.</li>
+<li><strong>코드 제너레이션 방식 변경</strong>: 기존 Plan 9 어셈블리 기반에서 플랫폼 독립적인 SSA(Static Single Assignment) 형식으로 변경.</li>
+</ul>
+<h3 id="3-go-16-2016">3. <strong>Go 1.6 (2016년)</strong><a class="headerlink" href="#3-go-16-2016" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HTTP/2 지원</strong>: 기본 라이브러리에서 HTTP/2가 지원되기 시작함.</li>
+<li><strong>소스 코드 트리밍</strong>: 컴파일 타임 성능 향상을 위해 사용하지 않는 코드를 제거하는 기법 추가.</li>
+</ul>
+<h3 id="4-go-17-2016">4. <strong>Go 1.7 (2016년)</strong><a class="headerlink" href="#4-go-17-2016" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SSA 백엔드 활성화</strong>: Go 1.5에서 도입된 SSA 기반의 컴파일러 백엔드가 활성화되었음. 이는 코드 최적화를 더 효율적으로 수행하게 하고, 전반적인 성능을 향상시킴.</li>
+<li><strong>성능 향상</strong>: 함수 호출 및 기타 기본 작업들의 성능이 눈에 띄게 개선됨.</li>
+</ul>
+<h3 id="5-go-19-2017">5. <strong>Go 1.9 (2017년)</strong><a class="headerlink" href="#5-go-19-2017" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Type Alias 추가</strong>: 기존 타입과 새로운 타입 간의 호환성을 제공하기 위한 <code>type alias</code> 기능이 도입됨. 이는 대규모 코드베이스의 리팩토링에 유용함.</li>
+<li><strong>sync.Map</strong>: 고성능의 동시성 안전한 맵(<code>sync.Map</code>)이 추가되어, 기존의 <code>map</code>과 비교해 동시성 상황에서 더 효율적인 처리가 가능해짐.</li>
+</ul>
+<h3 id="6-go-111-2018">6. <strong>Go 1.11 (2018년)</strong><a class="headerlink" href="#6-go-111-2018" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Go Modules 도입 (모듈 시스템)</strong>: 패키지 관리 및 의존성 관리를 위한 새로운 시스템인 <code>go modules</code>가 도입됨. 이는 기존의 <code>GOPATH</code> 기반 패키지 관리 방식을 대체하며, 특히 의존성 관리 및 버전 관리를 더 체계적으로 할 수 있게 해줌.</li>
+<li><strong>WebAssembly 지원</strong>: Go 코드를 WebAssembly 타겟으로 컴파일할 수 있게 됨.</li>
+</ul>
+<h3 id="7-go-113-2019">7. <strong>Go 1.13 (2019년)</strong><a class="headerlink" href="#7-go-113-2019" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>에러 핸들링 개선</strong>: <code>fmt.Errorf</code>에서 새로운 <code>%w</code> 포맷이 도입되어, 오류를 감싸서 반환하는 방식이 개선됨. 이는 <code>errors.Is</code>와 <code>errors.As</code> 함수를 통해 에러 체이닝이 쉬워졌음.</li>
+<li><strong>비트 연산자 추가</strong>: 새로운 정수형 비트 연산자들이 도입됨 (<code>math/bits</code> 패키지).</li>
+<li><strong>Go Modules 기본 활성화</strong>: Go modules가 기본으로 활성화되며, 모듈 시스템을 사용한 패키지 관리를 권장하게 됨.</li>
+</ul>
+<h3 id="8-go-114-2020">8. <strong>Go 1.14 (2020년)</strong><a class="headerlink" href="#8-go-114-2020" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Preemptive Scheduling 개선</strong>: 고루틴의 프리엠티브 스케줄링이 더 빈번하게 발생하여, 시스템의 응답성과 성능이 향상됨.</li>
+<li><strong>Testing 패키지 개선</strong>: <code>t.Run</code>을 통해 서브 테스트가 도입되었고, 병렬 테스트 기능이 개선됨.</li>
+</ul>
+<h3 id="9-go-116-2021">9. <strong>Go 1.16 (2021년)</strong><a class="headerlink" href="#9-go-116-2021" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>파일 임베딩 기능 추가</strong>: <code>embed</code> 패키지를 통해 정적 파일을 바이너리에 직접 임베드할 수 있게 되었음. 이는 별도의 파일 시스템 접근 없이도 정적 리소스를 다룰 수 있게 해줌.</li>
+<li><strong>Go Modules 완전 기본화</strong>: Go 1.16부터 <code>GOPATH</code> 방식이 완전히 사라지고, Go modules가 표준 패키지 관리 방식이 됨.</li>
+</ul>
+<h3 id="10-go-118-2022">10. <strong>Go 1.18 (2022년)</strong><a class="headerlink" href="#10-go-118-2022" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>제네릭(Generics) 도입</strong>: Go 1.18에서 가장 중요한 변화는 제네릭이 도입된 것임. 이는 함수와 데이터 구조체를 타입에 상관없이 재사용할 수 있게 만들어, Go의 유연성과 코드 재사용성을 크게 높여줌.</li>
+<li><strong>Fuzzing 도입</strong>: Go는 이제 기본적으로 <code>fuzz testing</code>을 지원하며, 이는 자동으로 입력값을 생성해 버그를 찾아내는 테스트 방식임.</li>
+<li><strong>비트 크기 제한 해제</strong>: Go 1.18부터 <code>math/big</code> 패키지를 통해 고정된 비트 크기 제한이 사라짐.</li>
+</ul>
+<h3 id="11-go-119-2022">11. <strong>Go 1.19 (2022년)</strong><a class="headerlink" href="#11-go-119-2022" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>성능 최적화</strong>: 많은 성능 최적화가 이루어졌으며, 특히 <code>Garbage Collector</code>와 관련된 개선으로 인해 대규모 애플리케이션에서의 성능이 향상됨.</li>
+<li><strong>Doc Comments 개선</strong>: 주석을 이용한 문서화 방식이 개선되어, 코드 문서화가 더 체계적으로 가능해짐.</li>
+<li><strong>메모리 모델 업데이트</strong>: 메모리 모델이 개선되어, 병렬 처리 시 동기화와 관련된 버그가 줄어듦.</li>
+</ul>
+<h3 id="12-go-120-2023">12. <strong>Go 1.20 (2023년)</strong><a class="headerlink" href="#12-go-120-2023" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>JSON 성능 최적화</strong>: JSON 인코딩 및 디코딩 관련 성능이 크게 개선됨.</li>
+<li><strong>에러 핸들링 개선</strong>: Go 1.20에서는 에러 핸들링에 대한 일부 개선이 있었으며, 표준 에러 처리 패턴에 대한 논의가 더 진전됨.</li>
+<li><strong>테스트 커버리지 개선</strong>: 테스트 커버리지가 개선되어, 더 세밀한 커버리지 분석이 가능하게 됨.</li>
+<li><strong>Memory Management 개선</strong>: 메모리 관리와 관련된 새로운 정책들이 추가되어, 특히 대규모 애플리케이션에서 메모리 사용 효율성이 높아짐.</li>
+</ul>
+<hr />
+<p>Go의 주요 버전이 오름에 따라 이러한 변화들이 있었고, 이를 통해 성능, 안정성, 사용성 측면에서 Go 언어가 계속 진화해왔음.</p>
 
 
 
@@ -2505,7 +2794,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2024</span>
   </span>
 
     
@@ -2515,7 +2804,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2024</span>
   </span>
 
     
@@ -2544,7 +2833,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../8.4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 8.4 오류는 값이다">
+          <a href="../../chapter11/11.4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 11.4 net/http">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2554,20 +2843,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                8.4 오류는 값이다
+                11.4 net/http
               </div>
             </div>
           </a>
         
         
           
-          <a href="../8.6/" class="md-footer__link md-footer__link--next" aria-label="Next: 8.6 Is 와 As">
+          <a href="../commands/" class="md-footer__link md-footer__link--next" aria-label="Next: Go 명령어">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                8.6 Is 와 As
+                Go 명령어
               </div>
             </div>
             <div class="md-footer__button md-icon">
