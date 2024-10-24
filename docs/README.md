@@ -28,6 +28,10 @@ aliases:
 
 > [!QUOTE] 참고 자료
 >
+> **reddit.com**
+> 
+> - u/JBodner (Author) - Learning Go 2nd Edition Released! [@r/golang](https://www.reddit.com/r/golang/comments/198lz51/learning_go_2nd_edition_released/)
+> 
 > **go.dev**
 > 
 > - [Go Documentation](https://go.dev/doc/)
