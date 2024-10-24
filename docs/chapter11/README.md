@@ -15,5 +15,5 @@ Go 는 `Batteries Included` 철학을 통해 최신의 프로그래밍 환경이
 1. [입출력 관련 기능](11.1.md)
 2. 시간
 3. [encoding/json](11.3.md)
-4. net/http
+4. [net/http](11.4.md)
 5. 마무리
