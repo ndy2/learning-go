@@ -2986,33 +2986,63 @@
 </span></code></pre></div>
 <hr />
 <h3 id="1311">13.1.1 테스트 실패 보고<a class="headerlink" href="#1311" title="Permanent link">&para;</a></h3>
+<p>테스트 실패를 보고하기 위한 *testing.T 인터페이스의 메서드를 알아보자.</p>
+<p>Error/ ErrorF 는 테스트 실패를 의미한다. 테스트 기능은 수행을 계속하고 다음 테스트를 수행한다.</p>
 <ul>
-<li>TODO</li>
+<li><code>t.Error(args ...interface{})</code></li>
+<li><code>t.ErrorF(format string, args ...interface{})</code></li>
 </ul>
+<p>Fail/ FailF 은 테스트 실패를 의미한다. 테스트 기능은 즉시 중단된다.</p>
+<ul>
+<li><code>t.Fail(args ...interface{})</code></li>
+<li><code>t.FailF(format string, args ...interface{})</code></li>
+</ul>
+<p>Error/ Fail 을 구분하여 직관적인 방식으로 junit/ kotest 진영의 soft assertion 을 구현했다는 것이 흥미롭다.</p>
 <hr />
 <h3 id="1312">13.1.2 설정과 해제<a class="headerlink" href="#1312" title="Permanent link">&para;</a></h3>
-<ul>
-<li>TODO</li>
-</ul>
+<p>TestMain 함수를 사용하여 테스트 전/후에 설정과 해제를 수행할 수 있다.</p>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">TestMain</span><span class="p">(</span><span class="nx">m</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">M</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="c1">// 테스트 전에 설정</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nx">setup</span><span class="p">()</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="c1">// 테스트 실행</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">code</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">Run</span><span class="p">()</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="c1">// 테스트 후 해제</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nx">teardown</span><span class="p">()</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nx">os</span><span class="p">.</span><span class="nx">Exit</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="kd">func</span><span class="w"> </span><span class="nx">TestFoo</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="c1">// 테스트 코드</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="kd">func</span><span class="w"> </span><span class="nx">TestBar</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="c1">// 테스트 코드</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>TestMain 개별 테스트 이전과 이후에 호출되는 것이 아니라, 한 번만 호출된다.</p>
 <hr />
 <h3 id="1313">13.1.3 샘플 테스트 데이터 저장<a class="headerlink" href="#1313" title="Permanent link">&para;</a></h3>
 <ul>
-<li>TODO</li>
+<li>테스트 함수의 샘플 데이터 사용이 필요한 경우, 파일을 저장할 <code>testdata</code> 디렉토리를 생성한다.</li>
+<li>예시: learning-go-book &gt; test_examples &gt; <code>text</code> 패키지 - <a href="https://github.com/learning-go-book/test_examples">@github</a> </li>
 </ul>
 <hr />
 <h3 id="1314">13.1.4 테스트 결과 캐싱<a class="headerlink" href="#1314" title="Permanent link">&para;</a></h3>
 <ul>
-<li>TODO</li>
+<li>Go 는 여러 패키지에 걸쳐 테스트를 수행할 때 이미 통과했고 코드의 변경이 없다면, 해당 결과를 캐시한다.</li>
+<li>캐시된 결과는 <code>go test -count=1</code> 로 무시할 수 있다.</li>
 </ul>
 <hr />
 <h3 id="1315-api">13.1.5 공용 API 테스트<a class="headerlink" href="#1315-api" title="Permanent link">&para;</a></h3>
 <ul>
+<li>패키지의 공용 API 만 테스트하고 싶다면, Go 는 이것을 특정하기 위한 편의를 제공한다.</li>
 <li>TODO</li>
 </ul>
 <hr />
 <h3 id="1316-go-cmp">13.1.6 go-cmp 를 사용하여 테스트 결과 비교<a class="headerlink" href="#1316-go-cmp" title="Permanent link">&para;</a></h3>
 <ul>
-<li>TODO</li>
+<li>복합 타입의 두 인스턴스를 철저하게 비교하기위해 <code>reflex.DeepEqual</code> 을 사용할 수 있다.</li>
+<li>구글의 서드-파티 모듈 <code>go-cmp</code> 를 사용하면 더 많은 기능을 사용할 수 있다. - <a href="https://github.com/google/go-cmp">@github</a></li>
 </ul>
 
 
