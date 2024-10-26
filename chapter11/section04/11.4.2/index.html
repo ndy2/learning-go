@@ -12,28 +12,28 @@
         <meta name="author" content="ndy">
       
       
-        <link rel="canonical" href="https://ndy2.github.io/learning-go/chapter05/">
+        <link rel="canonical" href="https://ndy2.github.io/learning-go/chapter11/section04/11.4.2/">
       
       
-        <link rel="prev" href="../chapter04/4.4/">
+        <link rel="prev" href="../11.4.1/">
       
       
-        <link rel="next" href="5.1/">
+        <link rel="next" href="../../../chapter12/">
       
       
-      <link rel="icon" href="../images/favicon.svg">
+      <link rel="icon" href="../../../images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>함수 - Study Learning Go</title>
+        <title>11.4.2 서버 - Study Learning Go</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,16 +52,16 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -70,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1142" class="md-skip">
           Skip to content
         </a>
       
@@ -105,9 +105,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Study Learning Go" class="md-header__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
+    <a href="../../.." title="Study Learning Go" class="md-header__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
       
-  <img src="../images/favicon.svg" alt="logo">
+  <img src="../../../images/favicon.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              함수
+              11.4.2 서버
             
           </span>
         </div>
@@ -237,9 +237,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Study Learning Go" class="md-nav__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
+    <a href="../../.." title="Study Learning Go" class="md-nav__button md-logo" aria-label="Study Learning Go" data-md-component="logo">
       
-  <img src="../images/favicon.svg" alt="logo">
+  <img src="../../../images/favicon.svg" alt="logo">
 
     </a>
     Study Learning Go
@@ -266,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -314,7 +314,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter02/" class="md-nav__link ">
+            <a href="../../../chapter02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -347,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter02/2.1/" class="md-nav__link">
+      <a href="../../../chapter02/2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter02/2.2/" class="md-nav__link">
+      <a href="../../../chapter02/2.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter02/2.3/" class="md-nav__link">
+      <a href="../../../chapter02/2.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter02/2.6/" class="md-nav__link">
+      <a href="../../../chapter02/2.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter02/NOTE/" class="md-nav__link">
+      <a href="../../../chapter02/NOTE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +485,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter03/" class="md-nav__link ">
+            <a href="../../../chapter03/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -518,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter03/3.2/" class="md-nav__link">
+      <a href="../../../chapter03/3.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter03/3.3/" class="md-nav__link">
+      <a href="../../../chapter03/3.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter03/3.4/" class="md-nav__link">
+      <a href="../../../chapter03/3.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter03/NOTE/" class="md-nav__link">
+      <a href="../../../chapter03/NOTE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +635,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter04/" class="md-nav__link ">
+            <a href="../../../chapter04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -668,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter04/4.1/" class="md-nav__link">
+      <a href="../../../chapter04/4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter04/4.2/" class="md-nav__link">
+      <a href="../../../chapter04/4.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter04/4.3/" class="md-nav__link">
+      <a href="../../../chapter04/4.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter04/4.4/" class="md-nav__link">
+      <a href="../../../chapter04/4.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,8 +756,6 @@
       
   
   
-    
-  
   
   
     
@@ -780,16 +778,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../../chapter05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -800,13 +798,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             5장 함수
@@ -822,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="5.1/" class="md-nav__link">
+      <a href="../../../chapter05/5.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="5.2/" class="md-nav__link">
+      <a href="../../../chapter05/5.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="5.3/" class="md-nav__link">
+      <a href="../../../chapter05/5.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="5.4/" class="md-nav__link">
+      <a href="../../../chapter05/5.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="5.5/" class="md-nav__link">
+      <a href="../../../chapter05/5.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +958,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter06/" class="md-nav__link ">
+            <a href="../../../chapter06/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -993,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter06/6.1/" class="md-nav__link">
+      <a href="../../../chapter06/6.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter06/6.2/" class="md-nav__link">
+      <a href="../../../chapter06/6.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter06/6.4/" class="md-nav__link">
+      <a href="../../../chapter06/6.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter06/6.7/" class="md-nav__link">
+      <a href="../../../chapter06/6.7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1116,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter07/" class="md-nav__link ">
+            <a href="../../../chapter07/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1149,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/7.1/" class="md-nav__link">
+      <a href="../../../chapter07/7.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1192,7 +1190,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter07/section02/" class="md-nav__link ">
+            <a href="../../../chapter07/section02/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1225,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/section02/7.2.1/" class="md-nav__link">
+      <a href="../../../chapter07/section02/7.2.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1246,7 +1244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/section02/7.2.7/" class="md-nav__link">
+      <a href="../../../chapter07/section02/7.2.7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1277,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/7.3/" class="md-nav__link">
+      <a href="../../../chapter07/7.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1298,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/7.5/" class="md-nav__link">
+      <a href="../../../chapter07/7.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1319,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/7.6/" class="md-nav__link">
+      <a href="../../../chapter07/7.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1340,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/7.7/" class="md-nav__link">
+      <a href="../../../chapter07/7.7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1361,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/7.8/" class="md-nav__link">
+      <a href="../../../chapter07/7.8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1382,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter07/interface/" class="md-nav__link">
+      <a href="../../../chapter07/interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1444,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter08/" class="md-nav__link ">
+            <a href="../../../chapter08/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1479,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.1/" class="md-nav__link">
+      <a href="../../../chapter08/8.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1500,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.2/" class="md-nav__link">
+      <a href="../../../chapter08/8.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.3/" class="md-nav__link">
+      <a href="../../../chapter08/8.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1542,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.4/" class="md-nav__link">
+      <a href="../../../chapter08/8.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1563,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.5/" class="md-nav__link">
+      <a href="../../../chapter08/8.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1584,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.6/" class="md-nav__link">
+      <a href="../../../chapter08/8.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1605,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.7/" class="md-nav__link">
+      <a href="../../../chapter08/8.7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1626,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.8/" class="md-nav__link">
+      <a href="../../../chapter08/8.8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter08/8.9/" class="md-nav__link">
+      <a href="../../../chapter08/8.9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1707,7 +1705,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter09/" class="md-nav__link ">
+            <a href="../../../chapter09/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1738,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter09/9.1/" class="md-nav__link">
+      <a href="../../../chapter09/9.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1759,7 +1757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter09/9.2/" class="md-nav__link">
+      <a href="../../../chapter09/9.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1780,7 +1778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter09/9.3/" class="md-nav__link">
+      <a href="../../../chapter09/9.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +1819,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter09/section04/" class="md-nav__link ">
+            <a href="../../../chapter09/section04/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1854,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter09/section04/9.4.1/" class="md-nav__link">
+      <a href="../../../chapter09/section04/9.4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1885,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter09/9.5/" class="md-nav__link">
+      <a href="../../../chapter09/9.5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1906,7 +1904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter09/9.6/" class="md-nav__link">
+      <a href="../../../chapter09/9.6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1927,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter09/extras/" class="md-nav__link">
+      <a href="../../../chapter09/extras/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1983,7 +1981,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter10/" class="md-nav__link ">
+            <a href="../../../chapter10/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2014,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter10/10.1/" class="md-nav__link">
+      <a href="../../../chapter10/10.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2035,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter10/10.2/" class="md-nav__link">
+      <a href="../../../chapter10/10.2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2056,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter10/10.3/" class="md-nav__link">
+      <a href="../../../chapter10/10.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2077,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter10/10.4/" class="md-nav__link">
+      <a href="../../../chapter10/10.4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2116,7 +2114,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter10/section05/" class="md-nav__link ">
+            <a href="../../../chapter10/section05/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2158,6 +2156,8 @@
       
   
   
+    
+  
   
   
     
@@ -2176,16 +2176,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter11/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2202,7 +2202,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             11장 표준 라이브러리
@@ -2218,7 +2218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter11/11.1/" class="md-nav__link">
+      <a href="../../11.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2239,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter11/11.3/" class="md-nav__link">
+      <a href="../../11.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2257,6 +2257,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2273,16 +2275,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter11/section04/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2299,7 +2301,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11_4">
             <span class="md-nav__icon md-icon"></span>
             11.4 net/http
@@ -2315,7 +2317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter11/section04/11.4.1/" class="md-nav__link">
+      <a href="../11.4.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2333,10 +2335,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../chapter11/section04/11.4.2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    11.4.2 서버
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2345,6 +2365,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1142" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4.2 서버
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.4.2 서버">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      미들웨어
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      서버를 강화하기 위한 관용적 서드: 파티 모듈 사용
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2392,7 +2463,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter12/" class="md-nav__link ">
+            <a href="../../../chapter12/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2425,7 +2496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter12/12.1/" class="md-nav__link">
+      <a href="../../../chapter12/12.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2496,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extras/changelog/" class="md-nav__link">
+      <a href="../../../extras/changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2517,7 +2588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extras/commands/" class="md-nav__link">
+      <a href="../../../extras/commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2538,7 +2609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extras/semver/" class="md-nav__link">
+      <a href="../../../extras/semver/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2576,8 +2647,47 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1142" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4.2 서버
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.4.2 서버">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      미들웨어
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      서버를 강화하기 위한 관용적 서드: 파티 모듈 사용
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2596,22 +2706,29 @@
     
       
     
-    <a href="https://github.com/ndy2/learning-go/tree/main/docs/chapter05/README.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/ndy2/learning-go/tree/main/docs/chapter11/section04/11.4.2.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="_1">함수<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<ol>
-<li><a href="5.1/">함수 선언과 호출</a></li>
-<li><a href="5.2/">함수는 값이다</a></li>
-<li><a href="5.3/">클로저</a></li>
-<li><a href="5.4/">defer</a></li>
-<li><a href="5.5/">값에 의한 호출을 사용하는 Go</a></li>
-<li>마무리</li>
-</ol>
+  <h1>11.4.2 서버</h1>
+
+<h3 id="1142">11.4.2 서버<a class="headerlink" href="#1142" title="Permanent link">&para;</a></h3>
+<ul>
+<li>TODO</li>
+</ul>
+<hr />
+<h4 id="_1">미들웨어<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>TODO</li>
+</ul>
+<hr />
+<h4 id="_2">서버를 강화하기 위한 관용적 서드: 파티 모듈 사용<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>TODO</li>
+</ul>
 
 
 
@@ -2634,7 +2751,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2024</span>
   </span>
 
     
@@ -2644,7 +2761,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2024</span>
   </span>
 
     
@@ -2673,7 +2790,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../chapter04/4.4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4.4 switch 문">
+          <a href="../11.4.1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 11.4.1 클라이언트">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2683,20 +2800,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                4.4 switch 문
+                11.4.1 클라이언트
               </div>
             </div>
           </a>
         
         
           
-          <a href="5.1/" class="md-footer__link md-footer__link--next" aria-label="Next: 5.1 함수 선언과 호출">
+          <a href="../../../chapter12/" class="md-footer__link md-footer__link--next" aria-label="Next: 12장 컨텍스트">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                5.1 함수 선언과 호출
+                12장 컨텍스트
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2730,10 +2847,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.action.view", "navigation.footer", "navigation.indexes", "content.code.annotate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.footer", "navigation.indexes", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
