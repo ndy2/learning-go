@@ -20,7 +20,7 @@ aliases:
 10. [Go 의 동시성](chapter10/README.md)
 11. [표준 라이브러리](chapter11/README.md)
 12. [컨텍스트](chapter12/README.md)
-13. 테스트 작성
+13. [테스트 작성](chapter13/README.md)
 14. Reflect, Unsafe, Cgo
 15. Go 의 제네릭
 
@@ -36,4 +36,5 @@ aliases:
 > 
 > - [Go Documentation](https://go.dev/doc/)
 > - [How to Write Go Code](https://go.dev/doc/code)
+> - [Tutorials](https://go.dev/doc/tutorial)
 > - [Language Specification](https://go.dev/ref/spec)
