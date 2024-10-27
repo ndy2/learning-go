@@ -2,6 +2,8 @@
 title: 번외 - 로깅
 ---
 
+# 번외 - 로깅
+
 > [!QUOTE] 참고 자료 
 > 
 > - pkg.go.dev > [log](https://pkg.go.dev/log)
