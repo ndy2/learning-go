@@ -1216,18 +1216,33 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      예시: 구조체 리터럴
+      사용자 정의 타입
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="사용자 정의 타입">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 예시: 합성 타입 선언
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      예시: 복합 타입 리터럴
+      2. 예시: 복합 타입 리터럴
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1251,6 +1266,8 @@
       
         
           
+        
+      
         
       
         
@@ -1328,6 +1345,27 @@
   
   <span class="md-ellipsis">
     7.2.7 열거형을 위한 iota
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section02/extras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    번외 - 메서드 집합
   </span>
   
 
@@ -2250,6 +2288,8 @@
       
         
       
+        
+      
     
     
     
@@ -2336,6 +2376,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../chapter11/extras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    번외 - 로깅
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -2354,7 +2415,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_5" >
         
           
           
@@ -2370,14 +2431,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_5" id="__nav_11_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_5">
             <span class="md-nav__icon md-icon"></span>
             11.4 net/http
           </label>
@@ -2905,18 +2966,33 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      예시: 구조체 리터럴
+      사용자 정의 타입
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="사용자 정의 타입">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 예시: 합성 타입 선언
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      예시: 복합 타입 리터럴
+      2. 예시: 복합 타입 리터럴
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2948,7 +3024,21 @@
 
   <h1>7.1 Go의 타입</h1>
 
-<h4 id="_1">예시: 구조체 리터럴<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<h3 id="_1">사용자 정의 타입<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Go 는 사용자가 직접 타입을 정의하는 것을 허용한다.
+새로운 타입을 선언 할 때는 내장 타입과 마찬가지로 </p>
+<ol>
+<li>값에 할당해야 하는 메모리의 크기</li>
+<li>할당된 메모리를 통해 표현할 수 있는 값의 종류</li>
+</ol>
+<p>두 가지 정보를 컴파일러에게 제공해야 한다.</p>
+<p>Go 에서 사용자 정의 타입을 선언하는 방법은 크게 두 가지다.</p>
+<ol>
+<li>struct 키워드를 이용하여 합성 타입을 정의하는 방법</li>
+<li>기존 타입을 새로운 타입의 명세로 활용하는 방법</li>
+</ol>
+<hr />
+<h4 id="1">1. 예시: 합성 타입 선언<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">Name</span><span class="w"> </span><span class="kt">string</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">Age</span><span class="w">  </span><span class="kt">int</span>
@@ -2956,7 +3046,7 @@
 </span></code></pre></div>
 <p>이는 뒤에 따르는 구조체 리터럴의 기본 타입을 갖는 <code>Person</code>이라는 새로운 타입을 정의합니다.</p>
 <hr />
-<h4 id="_2">예시: 복합 타입 리터럴<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="2">2. 예시: 복합 타입 리터럴<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Score</span><span class="w"> </span><span class="kt">int</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Converter</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="nx">Score</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">type</span><span class="w"> </span><span class="nx">TeamScores</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="nx">Score</span>
@@ -2991,7 +3081,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2024</span>
   </span>
 
     

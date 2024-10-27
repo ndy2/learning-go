@@ -1200,6 +1200,8 @@
       
         
       
+        
+      
     
     
     
@@ -1271,6 +1273,27 @@
   
   <span class="md-ellipsis">
     7.2.7 열거형을 위한 iota
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="extras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    번외 - 메서드 집합
   </span>
   
 
@@ -2193,6 +2216,8 @@
       
         
       
+        
+      
     
     
     
@@ -2279,6 +2304,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../chapter11/extras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    번외 - 로깅
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -2297,7 +2343,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_5" >
         
           
           
@@ -2313,14 +2359,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_5" id="__nav_11_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_5">
             <span class="md-nav__icon md-icon"></span>
             11.4 net/http
           </label>
@@ -2865,7 +2911,7 @@
 
   <h1>7.2 메서드</h1>
 
-<p>대부분의 최신 언어와 마찬가지로, Go 는 사용자 정의 타입에 대한 메서드를 지원합니다. 메서드는 특정 타입에 속하는 함수입니다.</p>
+<p>대부분의 최신 언어와 마찬가지로, Go 는 사용자 정의 타입에 대한 메서드를 지원합니다. 메서드는 사용자가 정의한 타입에 행위(behavior)를 정의하기 위한 방법입니다.</p>
 <p>타입을 위한 메서드는 패키지 블록 레벨에서 정의된다.</p>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">Name</span><span class="w"> </span><span class="kt">string</span>
@@ -2882,14 +2928,15 @@
 다른 언어 (예: Java)에서는 <code>this</code> 또는 <code>self</code>와 같은 키워드를 사용하지만 Go 에서는 사용하지 않습니다.</p>
 <p>함수와 같이, 메서드 이름은 오버로딩 될 수 없습니다.</p>
 <p>메서드는 연관된 타입과 동일한 패키지에 정의되어야 합니다.</p>
+<hr />
 <ol>
-<li>포인터 리시버와 값 리시버</li>
+<li><a href="7.2.1/">포인터 리시버와 값 리시버</a></li>
 <li>nil 인스턴스를 위한 메서드 작성</li>
 <li>메서드도 함수이다</li>
 <li>함수와 메서드 비교</li>
 <li>타입 선언은 상속되지 않는다</li>
 <li>타입은 실행가능한 문서이다</li>
-<li>열거형을 위한 iota</li>
+<li><a href="7.2.7/">열거형을 위한 iota</a></li>
 </ol>
 
 
@@ -2913,7 +2960,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2024</span>
   </span>
 
     
