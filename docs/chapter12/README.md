@@ -1,5 +1,7 @@
 ---
 title: 12장 컨텍스트
+aliases:
+  - The Context
 ---
 
 # 12장 컨텍스트

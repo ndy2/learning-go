@@ -1,5 +1,7 @@
 ---
 title: 11장 표준 라이브러리
+aliases:
+  - The Standard Library
 ---
 
 # 11장 표준 라이브러리

@@ -1,5 +1,7 @@
 ---
 title: 13장 테스트 작성
+aliases:
+  - Writing Tests
 ---
 
 # 13장 테스트 작성
