@@ -1,7 +1,7 @@
 ---
-title: Go 명령어
+title: Go 도구 - 명령어
 aliases:
-  - Go Commands
+  - Go Tools
 ---
 
 > [!QUOTE] 참고 자료 
@@ -36,4 +36,8 @@ aliases:
 
 - `go test` 명령어는 테스트를 실행한다.
 
+### go work init
+
+- e.g.) `go work init ./hello`
+- The go work init command tells go to create a go.work file for a workspace containing the modules in the ./hello directory.
 
