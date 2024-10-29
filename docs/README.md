@@ -37,8 +37,8 @@ aliases:
 > - [Go Documentation](https://go.dev/doc/)
 > - [How to Write Go Code](https://go.dev/doc/code)
 > - [Tutorials](https://go.dev/doc/tutorial)
-> - 
 > - [Language Specification](https://go.dev/ref/spec)
 > 
 > **other books**
+> 
 > - [Go in Action](https://m.yes24.com/Goods/Detail/28186053)
